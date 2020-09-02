@@ -7,6 +7,16 @@ $(document).ready(
     frecciaDestra.click(scorrimentoDestra);
     frecciaSinistra.click(scorrimentoSinistra);
 
+    //funzione scorrimento frecce tastiera
+    $(document).keydown(
+      function(e){
+        if(e.keyCode == 37){
+          scorrimentoSinistra();
+        } else if (e.keyCode == 39){
+          scorrimentoDestra();
+        }
+      }
+    );
 
     function scorrimentoDestra(){
       //codice per scorrimento avanti immagini
