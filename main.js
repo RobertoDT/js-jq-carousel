@@ -18,6 +18,34 @@ $(document).ready(
       }
     );
 
+
+    //clicco sul pallino e mostro immagine corrispondente
+    $(".fa-circle").click(
+      function(){
+        var pallinoActive = $(".nav .active");
+        var imgActive = $(".images .active");
+
+        if(pallinoActive.hasClass("active")){
+          pallinoActive.removeClass("active");
+          $(this).addClass("active");
+
+          if(imgActive.hasClass("active")){
+            imgActive.removeClass("active");
+            $(this).addClass("active");
+          }
+        }
+
+
+
+      }
+    );
+
+
+
+
+
+
+
     function scorrimentoDestra(){
       //codice per scorrimento avanti immagini
       var imgActive = $(".images .active");
